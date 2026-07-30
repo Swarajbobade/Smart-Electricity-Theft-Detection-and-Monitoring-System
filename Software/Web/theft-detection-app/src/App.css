@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.gauges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gauge {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gauge h2 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.theft {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: red;
+  font-weight: bold;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gauges-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
